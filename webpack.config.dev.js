@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+// const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
 module.exports = {
   // mode: 'production', // LE INDICO EL MODO EXPLICITAMENTE
@@ -90,11 +90,10 @@ module.exports = {
         },
       ],
     }),
-    new Dotenv(),
-    new BundleAnalyzerPlugin(),
+    new Dotenv({ systemvars: true }),
+    // new BundleAnalyzerPlugin(),
   ],
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
     compress: true,
     historyApiFallback: true,
     port: 3000,
