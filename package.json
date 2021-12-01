@@ -39,7 +39,7 @@
     "mini-css-extract-plugin": "^2.4.3",
     "stylus": "^0.55.0",
     "stylus-loader": "^6.2.0",
-    "terser-webpack-plugin": "^5.2.4",
+    "terser-webpack-plugin": "^5.2.5",
     "url-loader": "^4.1.1",
     "webpack": "^5.61.0",
     "webpack-bundle-analyzer": "^4.5.0",
