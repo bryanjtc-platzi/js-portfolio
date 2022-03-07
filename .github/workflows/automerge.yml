@@ -13,3 +13,12 @@ jobs:
           node-version: 14.x
       - run: npm ci
       - run: npm run build
+  auto-merge:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Merge
+        uses: KeisukeYamashita/auto-renovate-pull-request-merge@v1
+        with:
+          intervalSeconds: 10
+          timeoutSeconds: 30
